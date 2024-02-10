@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
+import { RiSearchLine } from "react-icons/ri";
 import { Input, Label } from "./ContactFilter.styled";
 
 export const ContactFilter = ({ value, findContacts }) => {
 
     return (
       <Label>
+        <RiSearchLine style={{color:'#3373e2'}} />
         Find contacts by name:
         <Input
           type="text"

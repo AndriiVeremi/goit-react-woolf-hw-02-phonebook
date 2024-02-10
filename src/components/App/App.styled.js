@@ -23,6 +23,7 @@ font-style: italic;
 `
 
 export const Text = styled.p`
+width: 450px;
 font-size: 25px;
 text-align: center;
 padding: 50px;
