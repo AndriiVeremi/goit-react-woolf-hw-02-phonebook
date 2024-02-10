@@ -1,12 +1,11 @@
 import { ContactItem } from 'components/ContactItem/ContactItem';
-import { nanoid } from 'nanoid';
 
-export const ContactList = ({ visibleContacts }) => {
+export const ContactList = ({ data, deletContacts}) => {
 
   return (
     <ul>
-      {visibleContacts.map(item => (
-        <ContactItem key={nanoid()} name={item.name} number={item.number} />
+      {data.map(item => (
+        <ContactItem key={item.id} id={item.id} name={item.name} number={item.number} deletContacts={deletContacts} />
       ))}
     </ul>
   );

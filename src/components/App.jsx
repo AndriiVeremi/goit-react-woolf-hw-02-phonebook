@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { nanoid } from 'nanoid';
 import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { ContactFilter } from './ContactFilter/ContactFilter';
@@ -16,8 +17,13 @@ export class App extends Component {
     filter: '',
   };
 
-  addContacts = newContact => {
+  addContacts = data => {
     const { contacts } = this.state;
+
+    const newContact = {
+      id: nanoid(),
+      ...data,
+    };
 
     if (contacts.find(contact => contact.name === newContact.name)) {
       alert(`${newContact.name} вже існує`);
@@ -25,7 +31,7 @@ export class App extends Component {
     }
 
     this.setState(prevState => ({
-      contacts: [newContact, ...prevState.contacts],
+      contacts: [...prevState.contacts, newContact],
     }));
   };
 
@@ -36,7 +42,11 @@ export class App extends Component {
     });
   };
 
-
+  deletContacts = id => {
+    this.setState(prev => ({
+      contacts: prev.contacts.filter(item => item.id !== id),
+    }));
+  };
 
   viewContacts = () => {
     const { contacts, filter } = this.state;
@@ -58,7 +68,10 @@ export class App extends Component {
           value={this.state.filter}
           findContacts={this.findContacts}
         />
-        <ContactList data={visibleContacts} />
+        <ContactList
+          data={visibleContacts}
+          deletContacts={this.deletContacts}
+        />
       </Container>
     );
   }
