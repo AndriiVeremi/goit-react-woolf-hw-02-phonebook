@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Input, Label } from "./ContactFilter.styled";
 
 export const ContactFilter = ({ value, findContacts }) => {
@@ -17,4 +18,9 @@ export const ContactFilter = ({ value, findContacts }) => {
       </Label>
     );
   
+}
+
+ContactFilter.propTypes = {
+    value: PropTypes.string.isRequired,
+    findContacts: PropTypes.func.isRequired,
 }
