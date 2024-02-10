@@ -25,4 +25,12 @@ height: 25px;
 `
 export const Button = styled.button`
 font-size: 20px;
+
+&:hover {
+    background-color: #3373e2;
+}
+
+&:active{
+    scale: 0.8;
+}
 `

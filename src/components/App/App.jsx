@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import { ContactForm } from '../ContactForm/ContactForm';
 import { ContactList } from '../ContactList/ContactList';
 import { ContactFilter } from '../ContactFilter/ContactFilter';
-import { Container, Title, SubTitle } from './App.styled';
+import { Container, Title, SubTitle, Text } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -57,9 +57,8 @@ export class App extends Component {
   };
 
   render() {
-
     const visibleContacts = this.viewContacts();
-    
+
     return (
       <Container>
         <Title>Phonebook</Title>
@@ -69,10 +68,15 @@ export class App extends Component {
           value={this.state.filter}
           findContacts={this.findContacts}
         />
-        <ContactList
-          data={visibleContacts}
-          deletContacts={this.deletContacts}
-        />
+
+        {visibleContacts.length === 0 ? (
+          <Text>Sorry, you don't have any contacts.</Text>
+        ) : (
+          <ContactList
+            data={visibleContacts}
+            deletContacts={this.deletContacts}
+          />
+        )}
       </Container>
     );
   }
