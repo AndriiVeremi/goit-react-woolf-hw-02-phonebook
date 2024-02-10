@@ -20,17 +20,21 @@ flex-direction: column;
 `
 
 export const Input = styled.input`
-width: 250px;
-height: 25px;
+width: 300px;
+height: 35px;
+font-size: 20px;
+color: #3373e2;
+border: none;
 `
 export const Button = styled.button`
 font-size: 20px;
+background-color: #fff;
+border: none;
+border-radius: 10px;
+height: 35px;
 
 &:hover {
     background-color: #3373e2;
-}
-
-&:active{
-    scale: 0.8;
+    color: #fff;
 }
 `

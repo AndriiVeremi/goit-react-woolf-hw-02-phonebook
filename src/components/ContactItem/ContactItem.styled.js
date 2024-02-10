@@ -20,7 +20,15 @@ font-weight: 500;
 export const Button = styled.button`
 display: flex;
 height: 30px;
+padding: 10px 30px;
 align-items: center;
+background-color: #fff;
+border: none;
+border-radius: 10px;
 
-/* padding: 5px 10px; */
+&:hover {
+    background-color: #3373e2;
+    color: #fff;
+}
+
 `

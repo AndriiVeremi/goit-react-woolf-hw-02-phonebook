@@ -10,4 +10,6 @@ margin-bottom: 30px;
 
 export const Input = styled.input`
 width: 280px;
+font-size: 20px;
+color: #3373e2;
 `
