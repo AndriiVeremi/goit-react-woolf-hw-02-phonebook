@@ -15,10 +15,11 @@ gap: 30px;
 
 export const Label = styled.label`
 font-size: 20px;
+display: flex;
+flex-direction: column;
 `
 
 export const Input = styled.input`
-margin-left: 10px;
 width: 250px;
 height: 25px;
 `
