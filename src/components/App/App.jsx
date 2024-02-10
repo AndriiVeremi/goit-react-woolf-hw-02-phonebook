@@ -1,9 +1,10 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
+import { RiContactsBookFill } from "react-icons/ri";
 import { ContactForm } from '../ContactForm/ContactForm';
 import { ContactList } from '../ContactList/ContactList';
 import { ContactFilter } from '../ContactFilter/ContactFilter';
-import { Container, Title, SubTitle, Text } from './App.styled';
+import { Container, Title, Span, SubTitle, Text } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -13,7 +14,6 @@ export class App extends Component {
       { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
-    // contacts: [],
     filter: '',
   };
 
@@ -61,7 +61,8 @@ export class App extends Component {
 
     return (
       <Container>
-        <Title>Phonebook</Title>
+        <RiContactsBookFill style={{width:'100px', height:'100px', color:'#3373e2'}}/>
+        <Title>Phone<Span>book</Span></Title>
         <ContactForm setContacts={this.addContacts} />
         <SubTitle>Contacts List</SubTitle>
         <ContactFilter

@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { RiUserAddLine } from "react-icons/ri";
 import { Wrapper, Forma, Label, Input, Button } from './ContactForm.styled';
 
 export class ContactForm extends Component {
@@ -51,7 +52,7 @@ export class ContactForm extends Component {
               required
             />
           </Label>
-          <Button type="submit">Add Contact</Button>
+          <Button type="submit"><RiUserAddLine style={{marginRight:'10px'}} />Add Contact</Button>
         </Forma>
       </Wrapper>
     );

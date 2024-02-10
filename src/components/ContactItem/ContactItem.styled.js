@@ -19,16 +19,17 @@ font-weight: 500;
 
 export const Button = styled.button`
 display: flex;
+gap: 5px;
 height: 30px;
-padding: 10px 30px;
+padding: 10px 20px;
 align-items: center;
-background-color: #fff;
+color: #fff;
+background-color: #3373e2;
 border: none;
 border-radius: 10px;
 
 &:hover {
-    background-color: #3373e2;
-    color: #fff;
+    background-color: #295db8;
 }
 
 `
