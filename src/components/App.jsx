@@ -36,6 +36,8 @@ export class App extends Component {
     });
   };
 
+
+
   viewContacts = () => {
     const { contacts, filter } = this.state;
     const normalizedFilter = filter.toLowerCase();
