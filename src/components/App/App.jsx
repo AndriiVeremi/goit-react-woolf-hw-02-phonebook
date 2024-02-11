@@ -25,7 +25,7 @@ export class App extends Component {
       ...data,
     };
 
-    if (contacts.find(contact => contact.name === newContact.name)) {
+    if (contacts.find(contact => contact.name.toLocaleLowerCase() === newContact.name.toLocaleLowerCase())) {
       alert(`${newContact.name} вже існує`);
       return;
     }

@@ -27,6 +27,7 @@ color: #fff;
 background-color: #3373e2;
 border: none;
 border-radius: 10px;
+cursor: pointer;
 
 &:hover {
     background-color: #295db8;

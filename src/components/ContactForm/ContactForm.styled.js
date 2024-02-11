@@ -37,6 +37,7 @@ background-color: #3373e2;
 border: none;
 border-radius: 10px;
 height: 35px;
+cursor: pointer;
 
 &:hover {
     background-color: #295db8;
